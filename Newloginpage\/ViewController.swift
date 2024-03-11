@@ -8,12 +8,21 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
 
+    @IBOutlet weak var imageoutlet: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
 
+    @IBAction func backbuttonaction(_ sender: Any) {
+        
+        let navigate = storyboard?.instantiateViewController(identifier: "ViewController3") as! ViewController3
+        
+        navigationController?.popViewController(animated: true)
+        
+    }
 }
 
